@@ -6,6 +6,9 @@
 
 ## Introduction
 
+<img src="https://thumbs.gfycat.com/GlumWastefulAdouri-max-1mb.gif">
+
+The dataset is about car accident dataset in the USA from 2016 to 2021, which was collected using multiple Traffic APIs ([Reference](https://smoosavi.org/datasets/us_accidents)). More introductions and discriptions of the dataset are included in our project Jupyter Notebook.
 
 ## Data Preprocessing
 
