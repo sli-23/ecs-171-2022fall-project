@@ -2,7 +2,7 @@
 
 > **Note**
 > 
-> **Group 30**: [Google Colan Notebook](https://colab.research.google.com/drive/1AqbJA3umP6qhSGoXuhuWKKh4dS5_917D?usp=sharing)
+> **Group 30**: [Google Colab Notebook](https://colab.research.google.com/drive/1AqbJA3umP6qhSGoXuhuWKKh4dS5_917D?usp=sharing)
 
 ## Introduction
 
