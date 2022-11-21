@@ -2,7 +2,7 @@
 
 > **Note**
 > 
-> **Group 30**: [Jupyter Notebook Link]()
+> **Group 30**: [https://colab.research.google.com/drive/1AqbJA3umP6qhSGoXuhuWKKh4dS5_917D?usp=sharing]()
 
 ## Introduction
 
