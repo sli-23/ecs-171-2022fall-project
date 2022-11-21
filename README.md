@@ -12,6 +12,33 @@ The dataset is about car accident dataset in the USA from 2016 to 2021, which wa
 
 ## Data Preprocessing
 
+### Delete some uncessary variables:
+1.   `ID`
+2.   `Description`
+3.   `Airport_Code`
+4.   `Timezone`
+5.   `Start_Time`
+6.   `End_Time`                
+7.   `Start_Lat`              
+8.   `Start_Lng`             
+9.   `End_Lat`            
+10.  `End_Lng`
+11.  `Street`
+12.  `Country`
+13.  `Weather_Timestamp`
+14.  `City`
+15.  `Zipcode`
+
+### Based on Null and missing values, we also will delete:
+1. Number
+2. Precipitation(in)
+3. Wind_Chill(F)
+
+#### We decide to delete some categorical variables because they won't affect the severity of the car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables, such as the driving time and the terrain, which are consisting of the Start_Time ,End_Time, Start_Lat, End_Lat, Start_lng and End_lng. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
+
+Given that , we have
+
+
 In the `Wind_Speed(mph)` column of the data, we decided to impute data. We used mean value of the `Win_Speed(mph)` to replace the NaN value in this column of data.
 
 Regarding to `Humidity(%)` column of the data, we also use mean to replace nan values.
