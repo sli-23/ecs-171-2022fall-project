@@ -30,13 +30,17 @@ The dataset is about car accident dataset in the USA from 2016 to 2021, which wa
 15.  `Zipcode`
 
 ### Based on Null and missing values, we also will delete:
-1. Number
-2. Precipitation(in)
-3. Wind_Chill(F)
+1. `Number`
+2. `Precipitation(in)`
+3. `Wind_Chill(F)`
 
-#### We decide to delete some categorical variables because they won't affect the severity of the car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables, such as the driving time and the terrain, which are consisting of the Start_Time ,End_Time, Start_Lat, End_Lat, Start_lng and End_lng. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
+#### We decide to delete some categorical variables because they won't affect the severity of the car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables in later modeling, such as the driving time and the terrain, which are consisting of the `Start_Time` ,`End_Time`, `Start_Lat`, `End_Lat`, `Start_lng` and `End_lng`. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
 
-Given that , we have
+
+## Remove the missing value
+
+### Remove the boolean variables
+Given that we have 2845341 observations, we are able to remove the missing values of the following labels (`Civil_Twilight` `Nautical_Twilight` `Astronomical_Twilight` `Sunrise_Sunset`) because they only take a very small proportion of our dataset.
 
 
 In the `Wind_Speed(mph)` column of the data, we decided to impute data. We used mean value of the `Win_Speed(mph)` to replace the NaN value in this column of data.
