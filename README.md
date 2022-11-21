@@ -61,3 +61,12 @@ We do these because these columns of data contains at least 2 to 5 percents of m
 https://stackoverflow.com/questions/38152356/matplotlib-dollar-sign-with-thousands-comma-tick-labels
 https://www.kaggle.com/code/nikitagrec/usa-accidents-plotly-maps-text-classification
 https://www.kaggle.com/code/tusharsingh1411/us-road-accident-eda
+
+#### Author:
+Yinyin Guan,
+Randy Li,
+Shuying Li,
+Zuge Li,
+Hugo Lin,
+Jianfeng Lin
+
