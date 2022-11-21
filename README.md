@@ -42,7 +42,7 @@ The dataset is about car accident dataset in the USA from 2016 to 2021, which wa
 ### Remove the boolean variables
 Given that we have 2845341 observations, we are able to remove the missing values of the following labels (`Civil_Twilight` `Nautical_Twilight` `Astronomical_Twilight` `Sunrise_Sunset`) because they only take a very small proportion of our dataset.
 
-
+### Filling the missing values of categorical variables 
 In the `Wind_Speed(mph)` column of the data, we decided to impute data. We used mean value of the `Win_Speed(mph)` to replace the NaN value in this column of data.
 
 Regarding to `Humidity(%)` column of the data, we also use mean to replace nan values.
