@@ -54,3 +54,10 @@ For `Temperature(F)` column of the data, we use mean to replace nan values.
 For `Pressure(in)` column of the data, we use mean to replace nan values.
 
 We do these because these columns of data contains at least 2 to 5 percents of missing values, which is a big part of a data, so we need to use mean value to replace the nan instead of drop them.
+
+
+
+## Reference:
+https://stackoverflow.com/questions/38152356/matplotlib-dollar-sign-with-thousands-comma-tick-labels
+https://www.kaggle.com/code/nikitagrec/usa-accidents-plotly-maps-text-classification
+https://www.kaggle.com/code/tusharsingh1411/us-road-accident-eda
