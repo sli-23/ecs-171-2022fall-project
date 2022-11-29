@@ -63,6 +63,8 @@ For `Pressure(in)` column of the data, we use mean to replace nan values.
 
 We do these because these columns of data contains at least 2 to 5 percents of missing values, which is a big part of a data, so we need to use mean value to replace the nan instead of drop them.
 
+We also make severity in the data as 2 classes: high, low, which stand for 1, 0.
+
 ## model
 ### Linear Regression Model
 Our first model is a linear regression model, which we get a mean squared error of around 0.1045.
