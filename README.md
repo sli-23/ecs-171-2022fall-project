@@ -38,7 +38,7 @@ We decide to delete some categorical variables because they won't affect the sev
 
 #### Convert catorical variables using Orinal Encoder
 For `Wind_Direction`, we categorize wind direction to main 4 directions: north, west, south and east
-For `Weather_Condition`, the description about weather is really in detail, after some researches, we decide to categorize weather condition into 6 main categories: rain, fog, snow, cloud, clear, and thunderstorms. There are the main factors causing car accidents.
+For `Weather_Condition`, the description about weather is really in detail, after some researches, we decide to categorize weather condition into 6 main categories: rain, fog, snow, cloud, clear, and thunderstorms. These are the main causes in car accidents.
 For columns contain boolean value and for columns, such as `state` and `side`, we convert them to dummy value using ordinal encoder.
 
 #### Test and Split
