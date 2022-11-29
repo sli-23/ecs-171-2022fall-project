@@ -67,7 +67,7 @@ We do these because these columns of data contains at least 2 to 5 percents of m
 ### Linear Regression Model
 Our first model is a linear regression model, which we get a mean squared error of around 0.1045.
 
-### Logistic Regression Model
+### neural network Model
 Our second model is a neural network model.
 
 ## Reference:
