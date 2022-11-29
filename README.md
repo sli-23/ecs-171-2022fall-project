@@ -67,8 +67,14 @@ We do these because these columns of data contains at least 2 to 5 percents of m
 ### Linear Regression Model
 Our first model is a linear regression model, which we get a mean squared error of around 0.1045.
 
-### neural network Model
-Our second model is a neural network model. With the first three layers using activation function relu and the output layer using activation sigmoid. With these setting, we were able to achive 89% accuracy.
+### Neural network Model
+Our second model is a neural network model.
+
+### Evaluation
+We use classificaiton_report to evaluate our model.
+
+### How is our model in fitting graph
+Confusion Matrix
 
 ## Reference:
 https://stackoverflow.com/questions/38152356/matplotlib-dollar-sign-with-thousands-comma-tick-labels
