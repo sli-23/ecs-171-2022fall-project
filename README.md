@@ -70,7 +70,7 @@ We also make severity in the data as 2 classes: high, low, which stand for 1, 0.
 Our first model is a linear regression model, which we get a mean squared error of around 0.1045.
 
 ### Neural network Model
-Our second model is a neural network model.
+Our second model is a neural network model. With first three layers using activation funciton relu but with different units, the output layer using activation sigmoid, we were able to achive accuracy of 89%.
 
 ### Evaluation
 We use classificaiton_report to evaluate our model.
