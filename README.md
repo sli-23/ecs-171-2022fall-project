@@ -34,7 +34,7 @@ The dataset is about car accident dataset in the USA from 2016 to 2021, which wa
 2. `Precipitation(in)`
 3. `Wind_Chill(F)`
 
-#### We decide to delete some categorical variables because they won't affect the severity of the car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables in later modeling, such as the driving time and the terrain, which are consisting of the `Start_Time` ,`End_Time`, `Start_Lat`, `End_Lat`, `Start_lng` and `End_lng`. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
+We decide to delete some categorical variables because they won't affect the severity of the car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables in later modeling, such as the driving time and the terrain, which are consisting of the `Start_Time` ,`End_Time`, `Start_Lat`, `End_Lat`, `Start_lng` and `End_lng`. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
 
 #### Convert catorical variables using Orinal Encoder
 For `Wind_Direction`, we categorize wind direction to main 4 directions: north, west, south and east
@@ -63,7 +63,10 @@ For `Pressure(in)` column of the data, we use mean to replace nan values.
 
 We do these because these columns of data contains at least 2 to 5 percents of missing values, which is a big part of a data, so we need to use mean value to replace the nan instead of drop them.
 
+## model
+### Linear Regression Model
 
+### Logistic Regression Model
 
 ## Reference:
 https://stackoverflow.com/questions/38152356/matplotlib-dollar-sign-with-thousands-comma-tick-labels
