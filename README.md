@@ -36,6 +36,14 @@ The dataset is about car accident dataset in the USA from 2016 to 2021, which wa
 
 #### We decide to delete some categorical variables because they won't affect the severity of the car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables in later modeling, such as the driving time and the terrain, which are consisting of the `Start_Time` ,`End_Time`, `Start_Lat`, `End_Lat`, `Start_lng` and `End_lng`. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
 
+#### Convert catorical variables using Orinal Encoder
+For `Wind_Direction`, we categorize wind direction to main 4 directions: north, west, south and east
+For `Weather_Condition`, the description about weather is really in detail, after some researches, we decide to categorize weather condition into 6 main categories: rain, fog, snow, cloud, clear, and thunderstorms. There are the main factors causing car accidents.
+For columns contain boolean value and for columns, such as `state` and `side`, we convert them to dummy value using ordinal encoder.
+
+#### Test and Split
+Instead of spliting the data using base on certain percentage, we decided to split data base on the year the acciendt occurs.
+We use accidents that happen before 2021 as training data, and accidents happen in 2021 to test our model.
 
 ## Remove the missing value
 
