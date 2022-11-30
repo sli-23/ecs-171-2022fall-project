@@ -73,7 +73,7 @@ Our first model is a linear regression model, which we get a mean squared error 
 Our second model is a neural network model. With first three layers using activation funciton relu but with different units, the output layer using activation sigmoid, we were able to achive accuracy of 89%.
 
 ### Evaluation
-We use classificaiton_report to evaluate our model.
+We use classificaiton_report and training, testing loss/error to evaluate our model.
 
 ### How is our model in fitting graph
 Confusion Matrix
