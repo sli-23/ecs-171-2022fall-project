@@ -77,7 +77,7 @@ We use classificaiton_report to evaluate our model.
 
 ### How is our model in fitting graph
 Confusion Matrix
-training error vs test error
+, training error vs test error. From the graph, it looks not good because the training and testing line are far away from each other.
 
 ## Reference:
 https://stackoverflow.com/questions/38152356/matplotlib-dollar-sign-with-thousands-comma-tick-labels
