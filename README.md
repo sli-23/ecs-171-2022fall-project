@@ -67,14 +67,8 @@ new_data.iloc[:,11:27] = ord_enc.fit_transform(new_data.iloc[:,11:27]).astype(in
 new_data.iloc[:,29:] = ord_enc.fit_transform(new_data.iloc[:,29:]).astype(int)
 ```
 
-#### Test and Split
-Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
-We use accidents happened before 2021 as training data, and accidents happened in 2021 as testing data.
-
-
-
 #### Filling the missing values of categorical variables 
-In the `Wind_Speed(mph)` column of the data, we decided to impute data. We used mean value of the `Win_Speed(mph)` to replace the NaN value in this column of data.
+In the `Wind_Speed(mph)` column of the data, we decided to impute data. We used mean value of the `Wind_Speed(mph)` to replace the NaN value in this column of data.
 
 Regarding to `Humidity(%)` column of the data, we also use mean to replace nan values.
 
@@ -86,16 +80,46 @@ For `Pressure(in)` column of the data, we use mean to replace nan values.
 
 We do these because these columns of data contains at least 2 to 5 percents of missing values, which is a big part of a data, so we need to use mean value to replace the nan instead of drop them.
 
-We also make severity in the data as 2 classes: high, low, which stand for 1, 0.
-
+#### Test and Split
+Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
+We use accidents happened before 2021 as training data, and accidents happened in 2021 as testing data.
+```
+training_data = new_data[new_data["year"] < 2021]
+test_data = new_data[new_data["year"] == 2020]
+training_data = training_data.drop(['year'], axis = 1)
+test_data = test_data.drop(['year'], axis = 1)
+```
 
 ### Linear Regression Model
-Our first model is a linear regression model, which we get a mean squared error of around 0.1045.
+Before running the linear regression model, we classified severity into 2 classes: '1' and '0' which stand for high and low.
+```
+X_train, y_train = training_data.drop(columns=['Severity']), training_data['Severity']
+X_test, y_test = test_data.drop(columns=['Severity']), test_data['Severity']
+
+y_train = [0 if y <= 2 else 1 for y in y_train]
+y_test = [0 if y <= 2 else 1 for y in y_test]
+```
+For serverity higher than 2, we classifed as high(1); if it is less than or equal to 2, we classifed as low(0).
 
 ### Neural network Model
-Our second model is a neural network model. With first three layers using activation funciton relu but with different units, the output layer using activation sigmoid, we were able to achive accuracy of 89%.
+For the first three layers, we used 16, 14, and 8 units respectively; and activation function 'relu'.
+For the output layers, we used 5 units and 'softmax' as the activation.
+```
+nn_model = Sequential()
+nn_model.add(Dense(units = 16, activation = 'relu', input_dim = 32))
+nn_model.add(Dense(units = 14, activation = 'relu'))
+nn_model.add(Dense(units = 8, activation = 'relu'))
+nn_model.add(Dense(units = 5, activation = 'softmax'))
+nn_model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics=['accuracy'])
+```
 
 ## Evaluation
+Our first model is a linear regression model, we get a mean squared error at around 0.1045 for testing data and 0.187 for training data. We also achieved an accuracy of 90%.
+<img width="573" alt="Screenshot 2022-12-05 at 9 30 50 AM" src="https://user-images.githubusercontent.com/76938794/205703456-65d2c98f-f9e4-491d-afe5-fe3726b4d383.png">
+<img width="342" alt="Screenshot 2022-12-05 at 9 30 58 AM" src="https://user-images.githubusercontent.com/76938794/205703459-fbb8d200-ace7-4dad-9fde-8e52eac6daf7.png">
+
+Our second model is a neural network model, we were able to achieve accuracy of 90%.
+
 We use classificaiton_report and training, testing loss/error to evaluate our model.
 
 ### How is our model in fitting graph
