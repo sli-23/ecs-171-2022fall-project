@@ -117,10 +117,12 @@ nn_model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics=
 We use classificaiton_report and training, testing loss/error to evaluate our model.
 
 Our first model is a linear regression model, we get a mean squared error at around 0.1045 for testing data and 0.187 for training data. We also achieved an accuracy of 90%.
+
 <img width="573" alt="Screenshot 2022-12-05 at 9 30 50 AM" src="https://user-images.githubusercontent.com/76938794/205703456-65d2c98f-f9e4-491d-afe5-fe3726b4d383.png">
 <img width="342" alt="Screenshot 2022-12-05 at 9 30 58 AM" src="https://user-images.githubusercontent.com/76938794/205703459-fbb8d200-ace7-4dad-9fde-8e52eac6daf7.png">
 
 Our second model is a neural network model, we were able to achieve accuracy of 86%.
+
 <img width="496" alt="Screenshot 2022-12-05 at 9 37 16 AM" src="https://user-images.githubusercontent.com/76938794/205704722-5ff5a881-ea63-4292-9762-a999a5ed35b5.png">
 <img width="495" alt="Screenshot 2022-12-05 at 9 37 24 AM" src="https://user-images.githubusercontent.com/76938794/205704726-a8050444-f242-4205-9459-f150a60d0f1d.png">
 <img width="567" alt="Screenshot 2022-12-05 at 9 37 32 AM" src="https://user-images.githubusercontent.com/76938794/205704739-0c2b6e33-67e3-41cb-97a7-29fe35e1d1fa.png">
