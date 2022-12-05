@@ -25,19 +25,20 @@ From the two plots below, we see that Miami is the city that has the most number
 <img width="902" alt="Screenshot 2022-12-05 at 7 38 55 AM" src="https://user-images.githubusercontent.com/76938794/205678969-bc7a904f-045f-4601-9666-9382e7341fa6.png">
 
 Majority of the car accidents collected in the dataset are from 2021 (53.1% of overall).
+
 <img width="987" alt="Screenshot 2022-12-05 at 7 39 30 AM" src="https://user-images.githubusercontent.com/76938794/205678970-ea9f034c-4f90-4d50-8b7c-271222036753.png">
 
 
 ### Data Preprocessing
+We decide to delete some categorical variables because they won't affect the severity of car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables, such as the driving time and the terrain, which are consisting of the `Start_Time` ,`End_Time`, `Start_Lat`, `End_Lat`, `Start_lng` and `End_lng`. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
 
-After reviewing the description of all the features, we decided to drop some unnecessary feature.
-#### Delete some unnecessary variables:
+Colunms to drop
 1.   `ID`
 2.   `Description`
 3.   `Airport_Code`
 4.   `Timezone`
 5.   `Start_Time`
-6.   `End_Time`                
+6.   `End_Time`             
 7.   `Start_Lat`              
 8.   `Start_Lng`             
 9.   `End_Lat`            
@@ -48,25 +49,29 @@ After reviewing the description of all the features, we decided to drop some unn
 14.  `City`
 15.  `Zipcode`
 
-
-#### Based on Null and missing values, we also will delete:
+Based on Null and missing values percentage, we also will delete:
 1. `Number`
 2. `Precipitation(in)`
 3. `Wind_Chill(F)`
 
-We decide to delete some categorical variables because they won't affect the severity of the car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables in later modeling, such as the driving time and the terrain, which are consisting of the `Start_Time` ,`End_Time`, `Start_Lat`, `End_Lat`, `Start_lng` and `End_lng`. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
+Given that we have 2845341 observations, we removed the missing values of the following labels: `Civil_Twilight`, `Nautical_Twilight`, `Astronomical_Twilight`, and `Sunrise_Sunset`.
 
 #### Convert catorical variables using Orinal Encoder
 For `Wind_Direction`, we categorize wind direction to main 4 directions: north, west, south and east
-For `Weather_Condition`, the description about weather is really in detail, after some researches, we decide to categorize weather condition into 6 main categories: rain, fog, snow, cloud, clear, and thunderstorms. These are the main causes in car accidents.
-For columns contain boolean value and for columns, such as `state` and `side`, we convert them to dummy value using ordinal encoder.
+For `Weather_Condition`, the description about weather is really in detail. After some researches, we decided to categorize weather condition into 6 main categories: rain, fog, snow, cloud, clear, and thunderstorms. These are the main causes in car accidents.
+For columns contain boolean values and strings, such as `state` and `side`, we converted them to dummy value using ordinal encoder.
+```
+ord_enc = OrdinalEncoder()
+
+new_data.iloc[:,11:27] = ord_enc.fit_transform(new_data.iloc[:,11:27]).astype(int)
+new_data.iloc[:,29:] = ord_enc.fit_transform(new_data.iloc[:,29:]).astype(int)
+```
 
 #### Test and Split
-Instead of spliting the data using base on certain percentage, we decided to split data base on the year the acciendt occurs.
-We use accidents that happen before 2021 as training data, and accidents happen in 2021 to test our model.
+Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
+We use accidents happened before 2021 as training data, and accidents happened in 2021 as testing data.
 
-#### Remove Missing variables
-Given that we have 2845341 observations, we are able to remove the missing values of the following labels (`Civil_Twilight` `Nautical_Twilight` `Astronomical_Twilight` `Sunrise_Sunset`) because they only take a very small proportion of our dataset.
+
 
 #### Filling the missing values of categorical variables 
 In the `Wind_Speed(mph)` column of the data, we decided to impute data. We used mean value of the `Win_Speed(mph)` to replace the NaN value in this column of data.
