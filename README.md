@@ -14,6 +14,8 @@ The dataset is about car accidents in the USA from 2016 to 2021, which was colle
 
 ## Method
 
+### Data Exploration
+
 ### Data Preprocessing
 
 #### Delete some uncessary variables:
@@ -49,12 +51,10 @@ For columns contain boolean value and for columns, such as `state` and `side`, w
 Instead of spliting the data using base on certain percentage, we decided to split data base on the year the acciendt occurs.
 We use accidents that happen before 2021 as training data, and accidents happen in 2021 to test our model.
 
-### Remove missing values
-
-### Remove the boolean variables
+#### Remove Missing variables
 Given that we have 2845341 observations, we are able to remove the missing values of the following labels (`Civil_Twilight` `Nautical_Twilight` `Astronomical_Twilight` `Sunrise_Sunset`) because they only take a very small proportion of our dataset.
 
-### Filling the missing values of categorical variables 
+#### Filling the missing values of categorical variables 
 In the `Wind_Speed(mph)` column of the data, we decided to impute data. We used mean value of the `Win_Speed(mph)` to replace the NaN value in this column of data.
 
 Regarding to `Humidity(%)` column of the data, we also use mean to replace nan values.
@@ -83,6 +83,7 @@ We use classificaiton_report and training, testing loss/error to evaluate our mo
 Confusion Matrix
 , training error vs test error. From the graph, it looks not good because the training and testing line are far away from each other. It shows a overfitting.
 
+## Discussion
 
 
 ## Reference:
@@ -92,5 +93,11 @@ https://www.kaggle.com/code/tusharsingh1411/us-road-accident-eda
 https://www.atmosera.com/blog/binary-classification-with-neural-networks/
 
 ## Contribution
-### Author: Yinyin Guan, Randy Li, Shuying Li, Zuge Li, Hugo Lin, Jianfeng Lin
+### Author: 
+Yinyin Guan:
+Randy Li:
+Shuying Li:
+Zuge Li:
+Hugo Lin:
+Jianfeng Lin:
 
