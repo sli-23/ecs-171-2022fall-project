@@ -94,10 +94,10 @@ https://www.atmosera.com/blog/binary-classification-with-neural-networks/
 
 ## Contribution
 ### Author: 
-Yinyin Guan:
-Randy Li:
-Shuying Li:
-Zuge Li:
-Hugo Lin:
-Jianfeng Lin:
+Yinyin Guan: 
+Randy Li: 
+Shuying Li: 
+Zuge Li: 
+Hugo Lin: 
+Jianfeng Lin: 
 
