@@ -15,6 +15,7 @@ The dataset is about car accidents in the USA from 2016 to 2021, which was colle
 ## Method
 
 ### Data Exploration
+From the heatmap, we can see that there is not sepcific feature that has a strong correlation with `Serverity`.
 <img width="1520" alt="Screenshot 2022-12-05 at 7 40 50 AM" src="https://user-images.githubusercontent.com/76938794/205678919-fe92775a-e867-4c15-b6bc-e7f47b4fd388.png">
 
 
