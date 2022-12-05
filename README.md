@@ -49,7 +49,7 @@ For columns contain boolean value and for columns, such as `state` and `side`, w
 Instead of spliting the data using base on certain percentage, we decided to split data base on the year the acciendt occurs.
 We use accidents that happen before 2021 as training data, and accidents happen in 2021 to test our model.
 
-## Remove missing values
+### Remove missing values
 
 ### Remove the boolean variables
 Given that we have 2845341 observations, we are able to remove the missing values of the following labels (`Civil_Twilight` `Nautical_Twilight` `Astronomical_Twilight` `Sunrise_Sunset`) because they only take a very small proportion of our dataset.
@@ -76,23 +76,21 @@ Our first model is a linear regression model, which we get a mean squared error 
 ### Neural network Model
 Our second model is a neural network model. With first three layers using activation funciton relu but with different units, the output layer using activation sigmoid, we were able to achive accuracy of 89%.
 
-### Evaluation
+## Evaluation
 We use classificaiton_report and training, testing loss/error to evaluate our model.
 
 ### How is our model in fitting graph
 Confusion Matrix
 , training error vs test error. From the graph, it looks not good because the training and testing line are far away from each other. It shows a overfitting.
 
+
+
 ## Reference:
 https://stackoverflow.com/questions/38152356/matplotlib-dollar-sign-with-thousands-comma-tick-labels
 https://www.kaggle.com/code/nikitagrec/usa-accidents-plotly-maps-text-classification
 https://www.kaggle.com/code/tusharsingh1411/us-road-accident-eda
+https://www.atmosera.com/blog/binary-classification-with-neural-networks/
 
-#### Author:
-Yinyin Guan,
-Randy Li,
-Shuying Li,
-Zuge Li,
-Hugo Lin,
-Jianfeng Lin
+## Contribution
+### Author: Yinyin Guan, Randy Li, Shuying Li, Zuge Li, Hugo Lin, Jianfeng Lin
 
