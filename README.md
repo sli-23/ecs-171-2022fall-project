@@ -18,19 +18,19 @@ The dataset is about car accidents in the USA from 2016 to 2021, which was colle
 From the heatmap, we can see that there is not sepcific feature that has a strong correlation with `Serverity`.
 <img width="1520" alt="Screenshot 2022-12-05 at 7 40 50 AM" src="https://user-images.githubusercontent.com/76938794/205678919-fe92775a-e867-4c15-b6bc-e7f47b4fd388.png">
 
-
-
-
+From the two plots below, we see that Miami is the city that has the most number of car accidents and California is the state that has most accidents.
 <img width="895" alt="Screenshot 2022-12-05 at 7 38 45 AM" src="https://user-images.githubusercontent.com/76938794/205678968-e446616e-3c13-4d6e-ab0c-9ec5e7836c85.png">
 
 <img width="902" alt="Screenshot 2022-12-05 at 7 38 55 AM" src="https://user-images.githubusercontent.com/76938794/205678969-bc7a904f-045f-4601-9666-9382e7341fa6.png">
 
+Majority of the car accidents collected in the dataset are from 2021 (53.1% of overall).
 <img width="987" alt="Screenshot 2022-12-05 at 7 39 30 AM" src="https://user-images.githubusercontent.com/76938794/205678970-ea9f034c-4f90-4d50-8b7c-271222036753.png">
 
 
 ### Data Preprocessing
 
-#### Delete some uncessary variables:
+After reviewing the description of all the features, we decided to drop some unnecessary feature.
+#### Delete some unnecessary variables:
 1.   `ID`
 2.   `Description`
 3.   `Airport_Code`
@@ -46,6 +46,7 @@ From the heatmap, we can see that there is not sepcific feature that has a stron
 13.  `Weather_Timestamp`
 14.  `City`
 15.  `Zipcode`
+
 
 #### Based on Null and missing values, we also will delete:
 1. `Number`
