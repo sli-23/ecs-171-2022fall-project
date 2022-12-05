@@ -4,15 +4,19 @@
 > 
 > **Group 30**: [Google Colab Notebook](https://colab.research.google.com/drive/1AqbJA3umP6qhSGoXuhuWKKh4dS5_917D?usp=sharing)
 
-## Introduction
+## Abstract
 
 <img src="https://thumbs.gfycat.com/GlumWastefulAdouri-max-1mb.gif">
 
-The dataset is about car accident dataset in the USA from 2016 to 2021, which was collected using multiple Traffic APIs ([Reference](https://smoosavi.org/datasets/us_accidents)). More introductions and discriptions of the dataset are included in our project Jupyter Notebook.
+The dataset is about car accidents in the USA from 2016 to 2021, which was collected using multiple Traffic APIs ([Reference](https://smoosavi.org/datasets/us_accidents)). 
 
-## Data Preprocessing
+## Introduction
 
-### Delete some uncessary variables:
+## Method
+
+### Data Preprocessing
+
+#### Delete some uncessary variables:
 1.   `ID`
 2.   `Description`
 3.   `Airport_Code`
@@ -29,7 +33,7 @@ The dataset is about car accident dataset in the USA from 2016 to 2021, which wa
 14.  `City`
 15.  `Zipcode`
 
-### Based on Null and missing values, we also will delete:
+#### Based on Null and missing values, we also will delete:
 1. `Number`
 2. `Precipitation(in)`
 3. `Wind_Chill(F)`
@@ -45,7 +49,7 @@ For columns contain boolean value and for columns, such as `state` and `side`, w
 Instead of spliting the data using base on certain percentage, we decided to split data base on the year the acciendt occurs.
 We use accidents that happen before 2021 as training data, and accidents happen in 2021 to test our model.
 
-## Remove the missing value
+## Remove missing values
 
 ### Remove the boolean variables
 Given that we have 2845341 observations, we are able to remove the missing values of the following labels (`Civil_Twilight` `Nautical_Twilight` `Astronomical_Twilight` `Sunrise_Sunset`) because they only take a very small proportion of our dataset.
@@ -65,7 +69,7 @@ We do these because these columns of data contains at least 2 to 5 percents of m
 
 We also make severity in the data as 2 classes: high, low, which stand for 1, 0.
 
-## model
+
 ### Linear Regression Model
 Our first model is a linear regression model, which we get a mean squared error of around 0.1045.
 
