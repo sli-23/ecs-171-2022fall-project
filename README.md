@@ -196,10 +196,10 @@ Our models suggest that the dataset is pretty unbalance
 
 
 ## Reference:
-https://stackoverflow.com/questions/38152356/matplotlib-dollar-sign-with-thousands-comma-tick-labels
-https://www.kaggle.com/code/nikitagrec/usa-accidents-plotly-maps-text-classification
-https://www.kaggle.com/code/tusharsingh1411/us-road-accident-eda
-https://www.atmosera.com/blog/binary-classification-with-neural-networks/
+  https://stackoverflow.com/questions/38152356/matplotlib-dollar-sign-with-thousands-comma-tick-labels
+  https://www.kaggle.com/code/nikitagrec/usa-accidents-plotly-maps-text-classification
+  https://www.kaggle.com/code/tusharsingh1411/us-road-accident-eda
+  https://www.atmosera.com/blog/binary-classification-with-neural-networks/
 
 ## Contribution
 ### Author: 
