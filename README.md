@@ -25,6 +25,8 @@ Accidents are unavoidable in people’s lives, but we all do not want it to happ
 ### Data Exploration
 From the heatmap, we can see that there is not sepcific feature that has a strong correlation with `Serverity`.
 
+<img width="1516" alt="Screenshot 2022-12-07 at 9 34 15 PM" src="https://user-images.githubusercontent.com/76938794/206364942-055c5bdf-dda4-48cd-8a79-80ec39f869c0.png">
+
 
 From the two plots below, we see that Miami is the city that has the most number of car accidents and California is the state that has most accidents.
 
@@ -32,9 +34,8 @@ From the two plots below, we see that Miami is the city that has the most number
 <img width="861" alt="Screenshot 2022-12-07 at 8 54 10 PM" src="https://user-images.githubusercontent.com/76938794/206364777-cb840e7c-77a5-447d-9f6a-c0286f3f964f.png">
 
 
-
 Majority of the car accidents collected in the dataset are from 2021 (53.1% of overall).
-
+<img width="867" alt="Screenshot 2022-12-07 at 9 33 42 PM" src="https://user-images.githubusercontent.com/76938794/206364888-68c6ee5c-6bd7-4d3a-8e2d-892201034965.png">
 
 
 Severity per year
