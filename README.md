@@ -234,10 +234,10 @@ In the future data collecting, we suggest adding some human factors, such as dri
 
 ## Contribution
 ### Author: 
-Yinyin Guan: worked on EDA, graphs, intro
-Randy Li: modify abstract, intro, and write some code of models, but fails.  
-Shuying Li: worked on EDA, Random Forest, Logistic Regression, PCA
-Zuge Li:   
-Hugo Lin: worked on the writing portion of data preprocessing in readme, make plot for testing and training accuracy 
-Jianfeng Lin:   
+- Yinyin Guan: worked on EDA, graphs, intro
+- Randy Li: modify abstract, intro, and write some code of models, but fails.  
+- Shuying Li: worked on EDA, Random Forest, Logistic Regression, PCA
+- Zuge Li:   
+- Hugo Lin: worked on the writing portion of data preprocessing in readme, make plot for testing and training accuracy 
+- Jianfeng Lin:   
 
