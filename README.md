@@ -166,6 +166,24 @@ importances = importances.sort_values(by='Weight', ascending=False)
 <img width="858" alt="Screenshot 2022-12-07 at 9 35 55 PM" src="https://user-images.githubusercontent.com/76938794/206365499-6fc08760-4604-4b73-97c5-13013744f1bf.png">
 <img width="579" alt="Screenshot 2022-12-07 at 9 36 01 PM" src="https://user-images.githubusercontent.com/76938794/206365507-957e3b90-118d-4aca-9b14-ca9e05b7e18b.png">
 
+### Random Forest Regressor 
+```
+importances = pd.DataFrame(data={'Feature': X_train.columns,'Weight': np.abs(model.feature_importances_)})
+importances = importances.sort_values(by='Weight', ascending=False)
+```
+<img width="872" alt="Screenshot 2022-12-07 at 11 40 53 PM" src="https://user-images.githubusercontent.com/76938794/206389362-fbb506eb-4456-4bf8-b622-64f26f2950e8.png">
+
+### PCA
+```
+labels = [p for p in range(1,len(pca.explained_variance_ratio_.cumsum())+1)]
+importances = pd.DataFrame(data={'PCA': labels,'explained_variance': pca.explained_variance_ratio_.cumsum()})
+```
+
+<img width="894" alt="Screenshot 2022-12-07 at 11 40 45 PM" src="https://user-images.githubusercontent.com/76938794/206389520-5367a869-5872-4017-be46-8de37f11f696.png">
+
+<img width="1363" alt="Screenshot 2022-12-07 at 11 40 35 PM" src="https://user-images.githubusercontent.com/76938794/206389527-4590ed65-be8d-447b-8f29-9ffe52f0fd94.png">
+
+
 ### Neural network Model
 For the first three layers, we used 32, 16, and 8 units respectively; and activation function 'relu'.
 For the output layers, we used 4 units and 'softmax' as the activation.
@@ -214,10 +232,10 @@ In the future data collecting, we suggest adding some human factors, such as dri
 
 ## Contribution
 ### Author: 
-Yinyin Guan:  
-Randy Li:   
-Shuying Li:   
-Zuge Li:   
-Hugo Lin:   
-Jianfeng Lin:   
+- Yinyin Guan: worked on EDA, graphs, intro 
+- Randy Li: modify abstract, intro, and write some code of models, but fails.   
+- Shuying Li: worked on EDA, Random Forest, Logistic Regression, PCA  
+- Zuge Li: delete useless variables like turning loop. Help data preprocessing by converting time scale.  build up artificial neural network, plot fitted graph, writing method model part  
+- Hugo Lin: worked on the writing portion of data preprocessing in readme, make plot for testing and training accuracy  
+- Jianfeng Lin: data preprocessing, neural network modeling, discussion(model finding , future suggestion)  
 
