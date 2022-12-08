@@ -95,12 +95,22 @@ new_data.iloc[:,11:27] = ord_enc.fit_transform(new_data.iloc[:,11:27]).astype(in
 new_data.iloc[:,29:] = ord_enc.fit_transform(new_data.iloc[:,29:]).astype(int)
 ```
 
+#### Dependent variable change
+By observing the gra
+```
+new_data.loc[new_data['Severity'] == 2, 'Severity'] = 1
+new_data.loc[new_data['Severity'] == 3, 'Severity'] = 2
+new_data.loc[new_data['Severity'] == 4, 'Severity'] = 3
+```
+
+
+
 #### Test and Split
 Instead of spliting the data base on certain percentage, we decided to split data base on the year the accidents occur.
-We use accidents happened before 2020 as training data, and accidents happened in 2020 as testing data.
+We use accidents happened before 2020 as training data, and accidents happened in 2020 as testing data. 
 ```
-training_data = new_data[new_data["year"] < 2021].sample(frac = 0.5, random_state = 42)
-test_data = new_data[new_data["year"] == 2020]
+training_data = new_data[new_data["year"] < 2020].sample(frac = 0.5, random_state = 42)
+test_data = new_data[new_data["year"] == 2020].sample(frac = 0.5, random_state = 42)
 training_data = training_data.drop(['year'], axis = 1)
 test_data = test_data.drop(['year'], axis = 1)
 ```
