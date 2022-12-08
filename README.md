@@ -84,8 +84,6 @@ new_data['Duration'] = new_data['Duration'].dt.total_seconds()
 new_data['Duration'] = new_data['Duration'] / 60
 ```
 
-
-
 #### Convert catorical variables using Orinal Encoder
 For `Wind_Direction`, we categorize wind direction to main 4 directions: north, west, south and east
 For `Weather_Condition`, the description about weather is really in detail. After some researches, we decided to categorize weather condition into 6 main categories: rain, fog, snow, cloud, clear, and thunderstorms. These are the main causes in car accidents.
@@ -98,33 +96,26 @@ new_data.iloc[:,29:] = ord_enc.fit_transform(new_data.iloc[:,29:]).astype(int)
 ```
 
 #### Test and Split
-Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
+Instead of spliting the data base on certain percentage, we decided to split data base on the year the accidents occur.
 We use accidents happened before 2020 as training data, and accidents happened in 2020 as testing data.
 ```
-training_data = new_data[new_data["year"] < 2020]
+training_data = new_data[new_data["year"] < 2021].sample(frac = 0.5, random_state = 42)
 test_data = new_data[new_data["year"] == 2020]
 training_data = training_data.drop(['year'], axis = 1)
 test_data = test_data.drop(['year'], axis = 1)
 ```
 
-### Linear Regression Model
-Before running the linear regression model, we classified severity into 2 classes: '1' and '0' which stand for high and low.
-```
-X_train, y_train = training_data.drop(columns=['Severity']), training_data['Severity']
-X_test, y_test = test_data.drop(columns=['Severity']), test_data['Severity']
+### Logistic Regression Model
 
-y_train = [0 if y <= 2 else 1 for y in y_train]
-y_test = [0 if y <= 2 else 1 for y in y_test]
-```
-For serverity higher than 2, we classifed as high(1); if it is less than or equal to 2, we classifed as low(0).
+
 
 ### Neural network Model
-For the first three layers, we used 16, 14, and 8 units respectively; and activation function 'relu'.
+For the first three layers, we used 32, 16, and 8 units respectively; and activation function 'relu'.
 For the output layers, we used 5 units and 'softmax' as the activation.
 ```
 nn_model = Sequential()
-nn_model.add(Dense(units = 16, activation = 'relu', input_dim = 32))
-nn_model.add(Dense(units = 14, activation = 'relu'))
+nn_model.add(Dense(units = 32, activation = 'relu', input_dim = 32))
+nn_model.add(Dense(units = 16, activation = 'relu'))
 nn_model.add(Dense(units = 8, activation = 'relu'))
 nn_model.add(Dense(units = 4, activation = 'softmax'))
 nn_model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics=['accuracy'])
@@ -133,10 +124,7 @@ nn_model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics=
 ## Evaluation
 We use classificaiton_report and training, testing loss/error to evaluate our model.
 
-Our first model is a linear regression model, we get a mean squared error at around 0.1045 for testing data and 0.187 for training data. We also achieved an accuracy of 90%.
-
-<img width="573" alt="Screenshot 2022-12-05 at 9 30 50 AM" src="https://user-images.githubusercontent.com/76938794/205703456-65d2c98f-f9e4-491d-afe5-fe3726b4d383.png">
-<img width="342" alt="Screenshot 2022-12-05 at 9 30 58 AM" src="https://user-images.githubusercontent.com/76938794/205703459-fbb8d200-ace7-4dad-9fde-8e52eac6daf7.png">
+O
 
 Our second model is a neural network model, we were able to achieve accuracy of 86%.
 
