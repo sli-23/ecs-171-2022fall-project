@@ -6,19 +6,13 @@
 > * Link: [Google Colab Notebook](https://colab.research.google.com/drive/1AqbJA3umP6qhSGoXuhuWKKh4dS5_917D?usp=sharing)
 > * Updated link: [Google Colab Notebook](https://colab.research.google.com/drive/1FxCVbPT-rJyXKdZTW4e3w5YCoAarldDA?usp=sharing)
 
-
-
 <img src="https://thumbs.gfycat.com/GlumWastefulAdouri-max-1mb.gif">
 
 The dataset is about car accidents in the USA from 2016 to 2021, which was collected using multiple Traffic APIs ([Reference](https://smoosavi.org/datasets/us_accidents)). 
 
-## Abstract
-
-Utilizing the car accidents that covered 49 states of the USA, the purpose of this project is to explore the independent variables, such as weather, humidity, wind speed, weather condition etc, to see whether they have significant impact to the cars severity, and develop reliable models to predict the cars severity in accidents. Before analyzing, we would use EDA to visualize the data, and help us better understand the data. We would use both supervised learning methods, such as neural network and linear regression, to evaluate the relationships between variables.
-
 ## Introduction
 
-Accidents are unavoidable in people’s lives, but we all do not want it to happen. A lot of factors can be analyzed for avoiding car accidents, such as the time it happens, start time and end time; the weather condition, whether it is rainy, cloudy, and, sunny; where it happens, whether this place is crowded or not. These factors can all be counted and concluded. So in this project, we will analyze the degree of which factor influencing by using data exploration and models.  
+Car is the most popular and convenient transportation nowadays, bringing accidents to people’s lives. Worldwide, approximately 1.3 million people die in car accidents each year. However, the accident could be avoided if we knew what factors would increase the possibility of a car accident. Therefore, in our project, we decided to analyze the US Accidents (2016 - 2021) dataset, by utilizing the dataset of car accidents covering 49 states of the USA, this project explores the factors that affect car accidents. These factors, such as weather, humidity, wind speed, weather conditions, etc, have a significant impact on severity. This project develops uses EDA to visualize data and help us better understand it, and finally build reliable models to predict it. Three supervised learning methods, including logistic regression, neural network, and linear regression will be used to evaluate the relationships between variables.
 
 ## Method
 
