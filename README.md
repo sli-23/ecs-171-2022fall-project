@@ -89,9 +89,11 @@ For `Pressure(in)` column of the data, we use mean to replace nan values.
 We do these because these columns of data contains at least 2 to 5 percents of missing values, which is a big part of a data, so we need to use mean value to replace the nan instead of drop them.
 
 #### Feature Engineering -- Wind Direction
-In wind direction column, we observe that 
+In wind direction column, we observe that there are some duplicative values, such as SSE and SSW, which they can be reclassified to south so that we can turn them into dummy variables in future.
 
+#### Feature Engineering -- Weather Condition
 
+#### Feature Engineering -- Duration
 #### Test and Split
 Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
 We use accidents happened before 2020 as training data, and accidents happened in 2020 as testing data.
