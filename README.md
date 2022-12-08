@@ -64,21 +64,8 @@ Based on Null and missing values percentage, we also will delete:
 
 Given that we have over 2 millions observations, we removed the missing values of the following labels: `Civil_Twilight`, `Nautical_Twilight`, `Astronomical_Twilight`, and `Sunrise_Sunset`.
 
-#### Convert catorical variables using Orinal Encoder
-For `Wind_Direction`, we categorize wind direction to main 4 directions: north, west, south and east
-For `Weather_Condition`, the description about weather is really in detail. After some researches, we decided to categorize weather condition into 6 main categories: rain, fog, snow, cloud, clear, and thunderstorms. These are the main causes in car accidents.
-For columns contain boolean values and strings, such as `state` and `side`, we converted them to dummy value using ordinal encoder.
-```
-ord_enc = OrdinalEncoder()
-
-new_data.iloc[:,11:27] = ord_enc.fit_transform(new_data.iloc[:,11:27]).astype(int)
-new_data.iloc[:,29:] = ord_enc.fit_transform(new_data.iloc[:,29:]).astype(int)
-```
-
-#### Dropping the NaN rows (We have very large dataset)
+#### Dropping the NaN rows(We have very large dataset)
 Given that we have 2 millions observations and only a few thousands of rows have missing value, it is okay to drop them.
-
-We do these because these columns of data contains at least 2 to 5 percents of missing values, which is a big part of a data, so we need to use mean value to replace the nan instead of drop them.
 
 #### Feature Engineering -- Wind Direction
 In wind direction column, we observe that there are some duplicative values, such as SSE and SSW, which they can be reclassified to south so that we can turn them into dummy variables in future.
@@ -89,6 +76,18 @@ According to road weather management program, it tells that snow/sleet, rain and
 
 #### Feature Engineering -- Duration
 
+
+
+#### Convert catorical variables using Orinal Encoder
+For `Wind_Direction`, we categorize wind direction to main 4 directions: north, west, south and east
+For `Weather_Condition`, the description about weather is really in detail. After some researches, we decided to categorize weather condition into 6 main categories: rain, fog, snow, cloud, clear, and thunderstorms. These are the main causes in car accidents.
+For columns contain boolean values and strings, such as `state` and `side`, we converted them to dummy value using ordinal encoder.
+```
+ord_enc = OrdinalEncoder()
+
+new_data.iloc[:,11:27] = ord_enc.fit_transform(new_data.iloc[:,11:27]).astype(int)
+new_data.iloc[:,29:] = ord_enc.fit_transform(new_data.iloc[:,29:]).astype(int)
+```
 
 #### Test and Split
 Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
