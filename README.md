@@ -92,8 +92,11 @@ We do these because these columns of data contains at least 2 to 5 percents of m
 In wind direction column, we observe that there are some duplicative values, such as SSE and SSW, which they can be reclassified to south so that we can turn them into dummy variables in future.
 
 #### Feature Engineering -- Weather Condition
+In order to simplify the weather_condition column, we look up some online resources.
+According to road weather management program, it tells that snow/sleet, rain and fog are the main weather condition cause car accidents. Therefore, we are only going to focus on these weather conditions.
 
 #### Feature Engineering -- Duration
+
 #### Test and Split
 Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
 We use accidents happened before 2020 as training data, and accidents happened in 2020 as testing data.
