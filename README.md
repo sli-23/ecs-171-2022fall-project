@@ -14,9 +14,11 @@ The dataset is about car accidents in the USA from 2016 to 2021, which was colle
 
 ## Abstract
 
-Utilizing the car accidents that covered 49 states of the USA, the purpose of this project is to explore the independent variables, such as weather, humidity, wind speed, weather condition etc, to see whether they have significant impact to the cars severity, and develop reliable models to predict the cars severity in accidents. Before analyzing, we would use EDA to visualize the data, and help us better understand the data. We would use both supervised learning and unsupervised learning methods, such as neural network and clustering, to evaluate the relationships between variables.
+Utilizing the car accidents that covered 49 states of the USA, the purpose of this project is to explore the independent variables, such as weather, humidity, wind speed, weather condition etc, to see whether they have significant impact to the cars severity, and develop reliable models to predict the cars severity in accidents. Before analyzing, we would use EDA to visualize the data, and help us better understand the data. We would use both supervised learning methods, such as neural network and linear regression, to evaluate the relationships between variables.
 
 ## Introduction
+
+Accidents are unavoidable in people’s lives, but we all do not want it to happen. A lot of factors can be analyzed for avoiding car accidents, such as the time it happens, start time and end time; the weather condition, whether it is rainy, cloudy, and, sunny; where it happens, whether this place is crowded or not. These factors can all be counted and concluded. So in this project, we will analyze the degree of which factor influencing by using data exploration and models.  
 
 ## Method
 
