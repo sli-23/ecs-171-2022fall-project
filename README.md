@@ -3,8 +3,8 @@
 > **Note**
 > 
 > **Group 30**: 
-> * Link: [Google Colab Notebook](https://colab.research.google.com/drive/1AqbJA3umP6qhSGoXuhuWKKh4dS5_917D?usp=sharing)
-> * Updated link: [Google Colab Notebook](https://colab.research.google.com/drive/1FxCVbPT-rJyXKdZTW4e3w5YCoAarldDA?usp=sharing)
+> * Notebook used for previous submission: [Google Colab Notebook](https://colab.research.google.com/drive/1AqbJA3umP6qhSGoXuhuWKKh4dS5_917D?usp=sharing)
+> * Notebook used for final submission: [Google Colab Notebook](https://colab.research.google.com/drive/1FxCVbPT-rJyXKdZTW4e3w5YCoAarldDA?usp=sharing)
 
 <img src="https://thumbs.gfycat.com/GlumWastefulAdouri-max-1mb.gif">
 
