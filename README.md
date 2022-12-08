@@ -166,26 +166,6 @@ importances = importances.sort_values(by='Weight', ascending=False)
 <img width="858" alt="Screenshot 2022-12-07 at 9 35 55 PM" src="https://user-images.githubusercontent.com/76938794/206365499-6fc08760-4604-4b73-97c5-13013744f1bf.png">
 <img width="579" alt="Screenshot 2022-12-07 at 9 36 01 PM" src="https://user-images.githubusercontent.com/76938794/206365507-957e3b90-118d-4aca-9b14-ca9e05b7e18b.png">
 
-
-### Random Forest Regressor
-```
-importances = pd.DataFrame(data={'Feature': X_train.columns,'Weight': np.abs(model.feature_importances_)})
-importances = importances.sort_values(by='Weight', ascending=False)
-```
-
-<img width="872" alt="Screenshot 2022-12-07 at 11 40 53 PM" src="https://user-images.githubusercontent.com/76938794/206388121-6e4ea53e-c4be-40a1-96d8-2f82bd09a57c.png">
-
-### PCA
-```
-labels = [p for p in range(1,len(pca.explained_variance_ratio_.cumsum())+1)]
-importances = pd.DataFrame(data={'PCA': labels,'explained_variance': pca.explained_variance_ratio_.cumsum()})
-```
-
-<img width="894" alt="Screenshot 2022-12-07 at 11 40 45 PM" src="https://user-images.githubusercontent.com/76938794/206388350-93991991-b494-4fc4-9ba8-2b5dac6b815c.png">
-
-<img width="1363" alt="Screenshot 2022-12-07 at 11 40 35 PM" src="https://user-images.githubusercontent.com/76938794/206388203-4844310b-432f-4c7a-af91-bf977400a8d2.png">
-
-
 ### Neural network Model
 For the first three layers, we used 32, 16, and 8 units respectively; and activation function 'relu'.
 For the output layers, we used 4 units and 'softmax' as the activation.
@@ -217,7 +197,7 @@ Initial data exploration can let us see the difference between speculation and r
 The humidity result is what we expected. As we know, the more humidity the air is the less friction coefficient between the road and the wheel. Since friction coefficient becomes lower, the friction force decreases, which leads to the car harder to be broken down.  This will lead to more car accidents. 
 That is the importance of data analysis. As long as we use data to show the degree of each factor contributing to the car accident severity, we can really conclude what and how each factor affects car accidents. We cannot take anything for granted that rainy days will affect car accidents or any other speculation. 
 
-For our modeling, we choose neural network, logistic regression, and random forest because we have a very large dataset. Compared with the other traditional machine learning methods, a neural network requires much more data because it needs to be fed by the data to update the weights,  thus finding the best weight. However, the memory is one of the challenges while we do the training because we need to store the weights and do the backpropagation. In the model training, we only use a small portion of the dataset. Compared with the other models we made, we find that neural network is sensitive to the severity of car accidents with level 2 and 3. It makes some correct predictions. 
+For our modeling, we choose neural network, logistic regression, and random forest because we have a very large dataset. Compared with the other traditional machine learning methods, a neural network requires much more data because it needs to be fed by the data to update the weights,  thus finding the best weight. However, the memory is one of the challenges while we do the training because we need to store the weights and do the backpropagation. In the model training, we only use a small portion of the dataset. Compared with the other models we made, we find that neural network is sensitive to the severity of car accidents with level 2 and 3. It makes some correct predictions. In addition, through logistic regression, random forest and principal component analysis, it is found that distance, wind speed, pressure, duration and some weather conditions are the main factors causing traffic accidents.
 
 After the data preprocessing and modeling, we find that the dataset is pretty unbalanced, since over 90% of the severity of car accidents is level 1. It also indicates that the minor car accidents take a large portion of the dataset. It is also a good sign that there is not too much insane driving in the states. However, this results in a lack of data to make a reliable model to predict what conditions will cause a very serious car accident. Due to the given data, we suspect that the severity of car accidents with level 2 and 3 may be caused by some unnatural factors. We can also conclude that most people will drive carefully when the natural condition is not good.
 From the classification reports of our logistic regression model and neural network, both models did an excellent job of predicting car accidents when severity is 2. In logistic regression, we got an 88% accuracy and an 83% accuracy for the neural network model. 
@@ -234,10 +214,10 @@ In the future data collecting, we suggest adding some human factors, such as dri
 
 ## Contribution
 ### Author: 
-- Yinyin Guan: worked on EDA, graphs, intro
-- Randy Li: modify abstract, intro, and write some code of models, but fails.  
-- Shuying Li: worked on EDA, Random Forest, Logistic Regression, PCA
-- Zuge Li:   
-- Hugo Lin: worked on the writing portion of data preprocessing in readme, make plot for testing and training accuracy 
-- Jianfeng Lin:   
+Yinyin Guan:  
+Randy Li:   
+Shuying Li:   
+Zuge Li:   
+Hugo Lin:   
+Jianfeng Lin:   
 
