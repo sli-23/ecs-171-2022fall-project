@@ -120,39 +120,36 @@ test_data = test_data.drop(['year'], axis = 1)
 #### Models
 
 Model1-Logistic Regression:
-```
-We would use the Logistic Regression model from Sklearn. 
-First, we set up the model of logistic regression. We employ X_train and y_train to fit into the model. 
-Then, we extract the features and weight.  
-We also make a histogram showing the weight of each feature (feature weight). 
-Finally, we show the precision and recall through the classification report tool from Sklearn.
-```
+ We would use the Logistic Regression model from Sklearn. 
+ First, we set up the model of logistic regression. We employ X_train and y_train to fit into the model. 
+ Then, we extract the features and weight.  
+ We also make a histogram showing the weight of each feature (feature weight). 
+ Finally, we show the precision and recall through the classification report tool from Sklearn.
 
 Model2-Random Forest Regressor:
-```
-We use the Random Forest Regressor from Sklearn.
+
+ We use the Random Forest Regressor from Sklearn.
  First, we set up the model Random Forest Regressor. 
-We use the model to fit X_train and y_train. 
-Here, we extract the features and weight(feature weight). 
-We make a histogram showing the weight of each feature as well. 
-Finally, we use a classification report tool from Sklearn to show precision and recall.
-```
+ We use the model to fit X_train and y_train. 
+ Here, we extract the features and weight(feature weight). 
+ We make a histogram showing the weight of each feature as well. 
+ Finally, we use a classification report tool from Sklearn to show precision and recall.
+
 
 PCA:
-```
-First, we set up PCA through Sklearn and fit the X_train. 
-Then, we extract the labels and explained variance ratio from the PCA. 
-Then, we plot a graph that can show the explained variance in the PCA so that we can tell feature weight.
-```
+
+ First, we set up PCA through Sklearn and fit the X_train. 
+ Then, we extract the labels and explained variance ratio from the PCA. 
+ Then, we plot a graph that can show the explained variance in the PCA so that we can tell feature weight.
 
 Model3-Artificial Neural Network:
-```
-We use keras library to build up the artificial neural network. 
-For the first dense layer, based on input data, we set the input dimension to be 32, units to be 32, and activation function is ‘relu’. 
-The second and third dense layers have the same activation function ‘relu’ but different units, which are 16 and 8 respectively. 
-The last dense layer, as an output layer, has 4 units and takes the ‘softmax’ activation function. Here we use optimizer ‘adam’ and categorical_crossentropy as the loss. Also, we add metrics to measure accuracy. 
-Finally, we fit X_train and y_train into a model with batch size as 1000 and 10 epochs. In the below, we make a fitted graph to show how this model will fit.
-```
+
+ We use keras library to build up the artificial neural network. 
+ For the first dense layer, based on input data, we set the input dimension to be 32, units to be 32, and activation function is ‘relu’. 
+ The second and third dense layers have the same activation function ‘relu’ but different units, which are 16 and 8 respectively. 
+ The last dense layer, as an output layer, has 4 units and takes the ‘softmax’ activation function. Here we use optimizer ‘adam’ and categorical_crossentropy as the loss. Also, we add metrics to measure accuracy. 
+ Finally, we fit X_train and y_train into a model with batch size as 1000 and 10 epochs. In the below, we make a fitted graph to show how this model will fit.
+
 
 
 ## Result
