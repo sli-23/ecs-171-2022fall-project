@@ -21,7 +21,7 @@ Utilizing the car accidents that covered 49 states of the USA, the purpose of th
 ## Method
 
 ### Data Exploration
-From the heatmap, we can see that there is not sepcific feature that has a strong correlation with `Serverity`.
+From the heatmap, we can see that there is no sepcific feature that has a strong correlation with `Serverity`.
 
 <img width="1516" alt="Screenshot 2022-12-07 at 9 34 15 PM" src="https://user-images.githubusercontent.com/76938794/206364942-055c5bdf-dda4-48cd-8a79-80ec39f869c0.png">
 
