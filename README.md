@@ -36,6 +36,7 @@ Majority of the car accidents collected in the dataset are from 2021 (53.1% of o
 
 <img width="987" alt="Screenshot 2022-12-05 at 7 39 30 AM" src="https://user-images.githubusercontent.com/76938794/205678970-ea9f034c-4f90-4d50-8b7c-271222036753.png">
 
+Severity per year
 <img width="987" alt="Screenshot 2022-12-07" src = "https://user-images.githubusercontent.com/118643840/206361875-32799656-9e00-418b-b624-04e000af300d.png">
 
 ### Data Preprocessing
@@ -97,13 +98,13 @@ new_data.iloc[:,29:] = ord_enc.fit_transform(new_data.iloc[:,29:]).astype(int)
 ```
 
 #### Dependent variable change
-By observing the gra
+By observing the severity per year graph, we find that there is no `severity = 1` in any of the years except year 2020. Therefore, we decide to combine it with `severity = 2` and classify it as a level 1 traffic accident, which we also call a minor traffic accident. In addition, we also rename `severity = 3` and `severity = 4` to 2 and 3 respectively.
+
 ```
 new_data.loc[new_data['Severity'] == 2, 'Severity'] = 1
 new_data.loc[new_data['Severity'] == 3, 'Severity'] = 2
 new_data.loc[new_data['Severity'] == 4, 'Severity'] = 3
 ```
-
 
 
 #### Test and Split
