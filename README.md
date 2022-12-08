@@ -24,17 +24,18 @@ Accidents are unavoidable in people’s lives, but we all do not want it to happ
 
 ### Data Exploration
 From the heatmap, we can see that there is not sepcific feature that has a strong correlation with `Serverity`.
-<img width="1520" alt="Screenshot 2022-12-05 at 7 40 50 AM" src="https://user-images.githubusercontent.com/76938794/205678919-fe92775a-e867-4c15-b6bc-e7f47b4fd388.png">
+
 
 From the two plots below, we see that Miami is the city that has the most number of car accidents and California is the state that has most accidents.
 
-<img width="895" alt="Screenshot 2022-12-05 at 7 38 45 AM" src="https://user-images.githubusercontent.com/76938794/205678968-e446616e-3c13-4d6e-ab0c-9ec5e7836c85.png">
+<img width="878" alt="Screenshot 2022-12-07 at 8 53 58 PM" src="https://user-images.githubusercontent.com/76938794/206364774-fae1250d-837d-443d-b550-5a7e88fffc1e.png">
+<img width="861" alt="Screenshot 2022-12-07 at 8 54 10 PM" src="https://user-images.githubusercontent.com/76938794/206364777-cb840e7c-77a5-447d-9f6a-c0286f3f964f.png">
 
-<img width="902" alt="Screenshot 2022-12-05 at 7 38 55 AM" src="https://user-images.githubusercontent.com/76938794/205678969-bc7a904f-045f-4601-9666-9382e7341fa6.png">
+
 
 Majority of the car accidents collected in the dataset are from 2021 (53.1% of overall).
 
-<img width="987" alt="Screenshot 2022-12-05 at 7 39 30 AM" src="https://user-images.githubusercontent.com/76938794/205678970-ea9f034c-4f90-4d50-8b7c-271222036753.png">
+
 
 Severity per year
 <img width="987" alt="Screenshot 2022-12-07" src = "https://user-images.githubusercontent.com/118643840/206361875-32799656-9e00-418b-b624-04e000af300d.png">
