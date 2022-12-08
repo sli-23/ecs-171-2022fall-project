@@ -75,16 +75,8 @@ new_data.iloc[:,11:27] = ord_enc.fit_transform(new_data.iloc[:,11:27]).astype(in
 new_data.iloc[:,29:] = ord_enc.fit_transform(new_data.iloc[:,29:]).astype(int)
 ```
 
-#### Filling the missing values of categorical variables 
-In the `Wind_Speed(mph)` column of the data, we decided to impute data. We used mean value of the `Wind_Speed(mph)` to replace the NaN value in this column of data.
-
-Regarding to `Humidity(%)` column of the data, we also use mean to replace nan values.
-
-For `Visibility(mi)` column of the data, we use mean to replace nan values.
-
-For `Temperature(F)` column of the data, we use mean to replace nan values.
-
-For `Pressure(in)` column of the data, we use mean to replace nan values.
+#### Dropping the NaN rows (We have very large dataset)
+Given that we have 2 millions observations and only a few thousands of rows have missing value, it is okay to drop them.
 
 We do these because these columns of data contains at least 2 to 5 percents of missing values, which is a big part of a data, so we need to use mean value to replace the nan instead of drop them.
 
@@ -92,10 +84,11 @@ We do these because these columns of data contains at least 2 to 5 percents of m
 In wind direction column, we observe that there are some duplicative values, such as SSE and SSW, which they can be reclassified to south so that we can turn them into dummy variables in future.
 
 #### Feature Engineering -- Weather Condition
-In order to simplify the weather_condition column, we look up some online resources.
+In order to simplify the `weather_condition` column, we look up some online resources.
 According to road weather management program, it tells that snow/sleet, rain and fog are the main weather condition cause car accidents. Therefore, we are only going to focus on these weather conditions.
 
 #### Feature Engineering -- Duration
+
 
 #### Test and Split
 Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
