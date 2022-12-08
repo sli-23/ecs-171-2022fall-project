@@ -153,6 +153,7 @@ Confusion Matrix
 , training error vs test error. From the graph, it looks not good because the training and testing line are far away from each other. It shows a overfitting.
 
 ## Discussion
+Our models suggest that the dataset is pretty unbalance 
 
 
 ## Reference:
