@@ -115,12 +115,12 @@ test_data = test_data.drop(['year'], axis = 1)
 
 ### Logistic Regression Model
 Since we try to find out what is the main factor of car accidents, we do a logistic regression model and make a graph on the weight of each feature.
-、、、
+```
 model = LogisticRegression()
 model.fit(X_train, y_train)
 importances = pd.DataFrame(data={'Feature': X_train.columns,'Weight': np.abs(model.coef_[0])})
 importances = importances.sort_values(by='Weight', ascending=False)
-、、、
+```
 
 ### Neural network Model
 For the first three layers, we used 32, 16, and 8 units respectively; and activation function 'relu'.
