@@ -152,9 +152,9 @@ O
 
 Our second model is a neural network model, we were able to achieve accuracy of 86%.
 
-<img width="496" alt="Screenshot 2022-12-05 at 9 37 16 AM" src="https://user-images.githubusercontent.com/76938794/205704722-5ff5a881-ea63-4292-9762-a999a5ed35b5.png">
-<img width="495" alt="Screenshot 2022-12-05 at 9 37 24 AM" src="https://user-images.githubusercontent.com/76938794/205704726-a8050444-f242-4205-9459-f150a60d0f1d.png">
-<img width="567" alt="Screenshot 2022-12-05 at 9 37 32 AM" src="https://user-images.githubusercontent.com/76938794/205704739-0c2b6e33-67e3-41cb-97a7-29fe35e1d1fa.png">
+<img width="496" alt="Screenshot 2022-12-05 at 9 37 16 AM" src="https://user-images.githubusercontent.com/118643840/206365929-8d505cf6-e33d-4cab-a16d-49fbcb030aa3.png">
+<img width="495" alt="Screenshot 2022-12-05 at 9 37 24 AM" src="https://user-images.githubusercontent.com/118643840/206366099-192dfe0f-dd8e-4ce2-a168-beb1f54051cf.png">
+<img width="567" alt="Screenshot 2022-12-05 at 9 37 32 AM" src="https://user-images.githubusercontent.com/118643840/206366205-816d2d52-4210-4ba1-a856-ed3a86a0c46c.png">
 
 
 ### How is our model in fitting graph
