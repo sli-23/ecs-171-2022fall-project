@@ -122,6 +122,11 @@ importances = pd.DataFrame(data={'Feature': X_train.columns,'Weight': np.abs(mod
 importances = importances.sort_values(by='Weight', ascending=False)
 ```
 
+## Evaluation
+
+<img width="858" alt="Screenshot 2022-12-07 at 9 35 55 PM" src="https://user-images.githubusercontent.com/76938794/206365499-6fc08760-4604-4b73-97c5-13013744f1bf.png">
+<img width="579" alt="Screenshot 2022-12-07 at 9 36 01 PM" src="https://user-images.githubusercontent.com/76938794/206365507-957e3b90-118d-4aca-9b14-ca9e05b7e18b.png">
+
 ### Neural network Model
 For the first three layers, we used 32, 16, and 8 units respectively; and activation function 'relu'.
 For the output layers, we used 5 units and 'softmax' as the activation.
@@ -133,12 +138,6 @@ nn_model.add(Dense(units = 8, activation = 'relu'))
 nn_model.add(Dense(units = 4, activation = 'softmax'))
 nn_model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics=['accuracy'])
 ```
-
-## Evaluation
-
-<img width="858" alt="Screenshot 2022-12-07 at 9 35 55 PM" src="https://user-images.githubusercontent.com/76938794/206365499-6fc08760-4604-4b73-97c5-13013744f1bf.png">
-<img width="579" alt="Screenshot 2022-12-07 at 9 36 01 PM" src="https://user-images.githubusercontent.com/76938794/206365507-957e3b90-118d-4aca-9b14-ca9e05b7e18b.png">
-
 
 Our second model is a neural network model, we were able to achieve accuracy of 86%.
 
