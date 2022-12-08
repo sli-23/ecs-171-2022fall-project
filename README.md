@@ -143,7 +143,7 @@ nn_model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics=
 <img width="495" alt="Screenshot 2022-12-07" src="https://user-images.githubusercontent.com/118643840/206366099-192dfe0f-dd8e-4ce2-a168-beb1f54051cf.png">
 <img width="567" alt="Screenshot 2022-12-07" src="https://user-images.githubusercontent.com/118643840/206366205-816d2d52-4210-4ba1-a856-ed3a86a0c46c.png">
 
-Our second model is a neural network model, we were able to achieve accuracy of 83%.
+For our neural network model, we were able to achieve accuracy of 83%.
 
 <img width="496" alt="Screenshot 2022-12-07" src = "https://user-images.githubusercontent.com/118643840/206369477-bd979aa7-75a7-43b8-b11e-ae632d385ade.png">
 
