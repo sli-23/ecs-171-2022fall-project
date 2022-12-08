@@ -88,11 +88,15 @@ For `Pressure(in)` column of the data, we use mean to replace nan values.
 
 We do these because these columns of data contains at least 2 to 5 percents of missing values, which is a big part of a data, so we need to use mean value to replace the nan instead of drop them.
 
+#### Feature Engineering -- Wind Direction
+In wind direction column, we observe that 
+
+
 #### Test and Split
 Instead of spliting the data base on certain percentage, we decided to split data base on the year the acciendts occur.
-We use accidents happened before 2021 as training data, and accidents happened in 2021 as testing data.
+We use accidents happened before 2020 as training data, and accidents happened in 2020 as testing data.
 ```
-training_data = new_data[new_data["year"] < 2021]
+training_data = new_data[new_data["year"] < 2020]
 test_data = new_data[new_data["year"] == 2020]
 training_data = training_data.drop(['year'], axis = 1)
 test_data = test_data.drop(['year'], axis = 1)
@@ -117,7 +121,7 @@ nn_model = Sequential()
 nn_model.add(Dense(units = 16, activation = 'relu', input_dim = 32))
 nn_model.add(Dense(units = 14, activation = 'relu'))
 nn_model.add(Dense(units = 8, activation = 'relu'))
-nn_model.add(Dense(units = 5, activation = 'softmax'))
+nn_model.add(Dense(units = 4, activation = 'softmax'))
 nn_model.compile(optimizer = 'adam', loss = 'categorical_crossentropy', metrics=['accuracy'])
 ```
 
