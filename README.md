@@ -119,14 +119,14 @@ test_data = test_data.drop(['year'], axis = 1)
 
 #### Models
 
-###Model1-Logistic Regression:
+### Model1-Logistic Regression:
  We would use the Logistic Regression model from Sklearn. 
  First, we set up the model of logistic regression. We employ X_train and y_train to fit into the model. 
  Then, we extract the features and weight.  
  We also make a histogram showing the weight of each feature (feature weight). 
  Finally, we show the precision and recall through the classification report tool from Sklearn.
 
-###Model2-Random Forest Regressor:
+### Model2-Random Forest Regressor:
 
  We use the Random Forest Regressor from Sklearn.
  First, we set up the model Random Forest Regressor. 
@@ -136,13 +136,13 @@ test_data = test_data.drop(['year'], axis = 1)
  Finally, we use a classification report tool from Sklearn to show precision and recall.
 
 
-###PCA:
+### PCA:
 
  First, we set up PCA through Sklearn and fit the X_train. 
  Then, we extract the labels and explained variance ratio from the PCA. 
  Then, we plot a graph that can show the explained variance in the PCA so that we can tell feature weight.
 
-###Model3-Artificial Neural Network:
+### Model3-Artificial Neural Network:
 
  We use keras library to build up the artificial neural network. 
  For the first dense layer, based on input data, we set the input dimension to be 32, units to be 32, and activation function is ‘relu’. 
