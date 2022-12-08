@@ -166,6 +166,24 @@ importances = importances.sort_values(by='Weight', ascending=False)
 <img width="858" alt="Screenshot 2022-12-07 at 9 35 55 PM" src="https://user-images.githubusercontent.com/76938794/206365499-6fc08760-4604-4b73-97c5-13013744f1bf.png">
 <img width="579" alt="Screenshot 2022-12-07 at 9 36 01 PM" src="https://user-images.githubusercontent.com/76938794/206365507-957e3b90-118d-4aca-9b14-ca9e05b7e18b.png">
 
+
+### Random Forest Regressor
+```
+importances = pd.DataFrame(data={'Feature': X_train.columns,'Weight': np.abs(model.feature_importances_)})
+importances = importances.sort_values(by='Weight', ascending=False)
+```
+
+<img width="872" alt="Screenshot 2022-12-07 at 11 40 53 PM" src="https://user-images.githubusercontent.com/76938794/206388121-6e4ea53e-c4be-40a1-96d8-2f82bd09a57c.png">
+
+### PCA
+```
+labels = [p for p in range(1,len(pca.explained_variance_ratio_.cumsum())+1)]
+importances = pd.DataFrame(data={'PCA': labels,'explained_variance': pca.explained_variance_ratio_.cumsum()})
+```
+
+<img width="1363" alt="Screenshot 2022-12-07 at 11 40 35 PM" src="https://user-images.githubusercontent.com/76938794/206388203-4844310b-432f-4c7a-af91-bf977400a8d2.png">
+
+
 ### Neural network Model
 For the first three layers, we used 32, 16, and 8 units respectively; and activation function 'relu'.
 For the output layers, we used 4 units and 'softmax' as the activation.
