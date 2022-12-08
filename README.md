@@ -6,13 +6,13 @@
 > * Link: [Google Colab Notebook](https://colab.research.google.com/drive/1AqbJA3umP6qhSGoXuhuWKKh4dS5_917D?usp=sharing)
 > * Updated link: [Google Colab Notebook](https://colab.research.google.com/drive/1FxCVbPT-rJyXKdZTW4e3w5YCoAarldDA?usp=sharing)
 
-## Abstract
+
 
 <img src="https://thumbs.gfycat.com/GlumWastefulAdouri-max-1mb.gif">
 
 The dataset is about car accidents in the USA from 2016 to 2021, which was collected using multiple Traffic APIs ([Reference](https://smoosavi.org/datasets/us_accidents)). 
 
-（需要改）Abstract:
+## Abstract
 
 Utilizing the car accidents that covered 49 states of the USA, the purpose of this project is to explore the independent variables, such as weather, humidity, wind speed, weather condition etc, to see whether they have significant impact to the cars severity, and develop reliable models to predict the cars severity in accidents. Before analyzing, we would use EDA to visualize the data, and help us better understand the data. We would use both supervised learning and unsupervised learning methods, such as neural network and clustering, to evaluate the relationships between variables.
 
