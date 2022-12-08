@@ -36,6 +36,7 @@ Majority of the car accidents collected in the dataset are from 2021 (53.1% of o
 
 <img width="987" alt="Screenshot 2022-12-05 at 7 39 30 AM" src="https://user-images.githubusercontent.com/76938794/205678970-ea9f034c-4f90-4d50-8b7c-271222036753.png">
 
+<img width="987" alt="Screenshot 2022-12-07" src = "https://user-images.githubusercontent.com/118643840/206361875-32799656-9e00-418b-b624-04e000af300d.png">
 
 ### Data Preprocessing
 We decide to delete some categorical variables because they won't affect the severity of car accidents. In addition, in order to futher explore the reason behind a car accident, we will add some new variables, such as the driving time and the terrain, which are consisting of the `Start_Time` ,`End_Time`, `Start_Lat`, `End_Lat`, `Start_lng` and `End_lng`. What's more, considering the percentage of missing value, we decide to delete any variables which its percentage is over 15%.
