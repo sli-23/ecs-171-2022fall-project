@@ -200,6 +200,7 @@ Our models suggest that the dataset is pretty unbalance
 - https://www.kaggle.com/code/nikitagrec/usa-accidents-plotly-maps-text-classification
 - https://www.kaggle.com/code/tusharsingh1411/us-road-accident-eda
 - https://www.atmosera.com/blog/binary-classification-with-neural-networks/
+- https://betterdatascience.com/feature-importance-python/
 
 ## Contribution
 ### Author: 
