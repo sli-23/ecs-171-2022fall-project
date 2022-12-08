@@ -181,6 +181,8 @@ labels = [p for p in range(1,len(pca.explained_variance_ratio_.cumsum())+1)]
 importances = pd.DataFrame(data={'PCA': labels,'explained_variance': pca.explained_variance_ratio_.cumsum()})
 ```
 
+<img width="894" alt="Screenshot 2022-12-07 at 11 40 45 PM" src="https://user-images.githubusercontent.com/76938794/206388350-93991991-b494-4fc4-9ba8-2b5dac6b815c.png">
+
 <img width="1363" alt="Screenshot 2022-12-07 at 11 40 35 PM" src="https://user-images.githubusercontent.com/76938794/206388203-4844310b-432f-4c7a-af91-bf977400a8d2.png">
 
 
@@ -232,10 +234,10 @@ In the future data collecting, we suggest adding some human factors, such as dri
 
 ## Contribution
 ### Author: 
-Yinyin Guan:  
-Randy Li:   
-Shuying Li:   
+Yinyin Guan: worked on EDA, graphs, intro
+Randy Li: modify abstract, intro, and write some code of models, but fails.  
+Shuying Li: worked on EDA, Random Forest, Logistic Regression, PCA
 Zuge Li:   
-Hugo Lin:   
+Hugo Lin: worked on the writing portion of data preprocessing in readme, make plot for testing and training accuracy 
 Jianfeng Lin:   
 
