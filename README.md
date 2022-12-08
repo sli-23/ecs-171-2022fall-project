@@ -68,13 +68,21 @@ Given that we have over 2 millions observations, we removed the missing values o
 Given that we have 2 millions observations and only a few thousands of rows have missing value, it is okay to drop them.
 
 #### Feature Engineering -- Wind Direction
-In wind direction column, we observe that there are some duplicative values, such as SSE and SSW, which they can be reclassified to south so that we can turn them into dummy variables in future.
+In `wind direction column`, we observe that there are some duplicative values, such as SSE and SSW, which they can be reclassified to south so that we can turn them into dummy variables in future.
 
 #### Feature Engineering -- Weather Condition
 In order to simplify the `weather_condition` column, we look up some online resources.
 According to road weather management program, it tells that snow/sleet, rain and fog are the main weather condition cause car accidents. Therefore, we are only going to focus on these weather conditions.
 
 #### Feature Engineering -- Duration
+
+```
+data['End_Time'] = pd.to_datetime(data['End_Time'])
+data['Start_Time'] = pd.to_datetime(data['Start_Time'])
+data['Duration'] = data.End_Time - data.Start_Time
+new_data['Duration'] = new_data['Duration'].dt.total_seconds()
+new_data['Duration'] = new_data['Duration'] / 60
+```
 
 
 
