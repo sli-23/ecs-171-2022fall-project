@@ -239,3 +239,4 @@ In the future data collecting, we suggest adding some human factors, such as dri
 - Hugo Lin: worked on the writing portion of data preprocessing in readme, make plot for testing and training accuracy  
 - Jianfeng Lin: data preprocessing, neural network modeling, discussion(model finding , future suggestion)  
 
+---
